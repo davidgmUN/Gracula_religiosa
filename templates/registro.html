@@ -1,0 +1,35 @@
+<DOCTYPE html>
+    <html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8"/>
+            <title>Registro Usuario</title>
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/estiloRegistro.css')}}"/>
+        </head>
+    
+        <body> 
+            <form>
+                <p>
+                    <img src="{{ url_for('static',filename='imagenes/graculalogo.png')}}" alt="logogracula" style="width:100px;height:100px;">GraculaReligiosa
+                </p>
+                
+                <h1 >Registro</h1>
+                
+                <div><span>Nombre</span> <input type="text" name="usuario"></div>
+
+                <div><span>Apellido</span> <input type="text" name="apellido"></div>
+
+                <div><span>Nombre de Usuario</span> <input type="text" name="nusuario"></div>
+
+                <div><span>Correo Electrónico</span> <input type="text" name="Correo"></div>
+               
+                <div><span>Clave</span> <input type="password" id="pass1" name="clave"></div>
+                
+                <div><span>Confirme Clave</span> <input type="password" id="pass2" name="clave"></div>
+                
+                <button type="submit" value="Enviar">Iniciar Sesion</button>
+            
+            </form>
+    
+        </body>
+    <html>

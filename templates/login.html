@@ -1,0 +1,28 @@
+<DOCTYPE html>
+    <html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8"/>
+            <title>GraculaReligiosa</title>
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/estiloLogin.css')}}"/>
+        </head>
+    
+        <body>
+        
+            <form>
+                <p>
+                    <img src="{{ url_for('static',filename='imagenes/graculalogo.png')}}" alt="logogracula" style="width:100px;height:100px;">
+                </p>
+                
+                <h1 >GraculaReligiosa</h1>
+                
+                <div><span>Usuario</span> <input type="text" name="usuario"></div>
+
+                <div><span>Contraseña</span> <input type="password" name="contraseña"></div>
+            
+                <button type="submit" value="Enviar">Iniciar Sesion</button>
+            
+            </form>
+    
+        </body>
+    <html>
