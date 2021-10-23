@@ -9,18 +9,26 @@
     
         <body>
         
-            <form>
+            <form class="form" action="/login/" method="POST" name="formLogin">
                 <p>
                     <img src="{{ url_for('static',filename='imagenes/graculalogo.png')}}" alt="logogracula" style="width:100px;height:100px;">
                 </p>
                 
                 <h1 >GraculaReligiosa</h1>
                 
-                <div><span>Usuario</span> <input type="text" name="usuario"></div>
+				{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					<div class="notification is-danger">
+						{{ messages[0] }}
+					</div>
+				{% endif %}
+				{% endwith %}
+				
+                <div><span>Usuario</span> <input type="text" id="usuario" name="usuario"></div>
 
-                <div><span>Contraseña</span> <input type="password" name="contraseña"></div>
+                <div><span>Contraseña</span> <input type="password" id="contraseña" name="contraseña"></div>
             
-                <button type="submit" value="Enviar">Iniciar Sesion</button>
+                <button type="submit">Iniciar Sesion</button>
             
             </form>
     

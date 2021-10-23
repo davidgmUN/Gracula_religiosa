@@ -1,35 +1,41 @@
-<DOCTYPE html>
-    <html>
-        <html lang="es">
-        <head>
-            <meta charset="UTF-8"/>
-            <title>Registro Usuario</title>
-            <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/estiloRegistro.css')}}"/>
-        </head>
-    
-        <body> 
-            <form>
-                <p>
-                    <img src="{{ url_for('static',filename='imagenes/graculalogo.png')}}" alt="logogracula" style="width:100px;height:100px;">GraculaReligiosa
-                </p>
-                
-                <h1 >Registro</h1>
-                
-                <div><span>Nombre</span> <input type="text" name="usuario"></div>
+<!DOCTYPE html>
+<html lang="es-CO";>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Registro Usuario</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/estiloRegistro.css')}}"/>
+	</head>
 
-                <div><span>Apellido</span> <input type="text" name="apellido"></div>
+	<body> 
+		<form class="form" action="/registro/" method="POST" name="formRegistro">
+			<p>
+				<img src="{{ url_for('static',filename='imagenes/graculalogo.png')}}" alt="logogracula" style="width:100px;height:100px;">GraculaReligiosa
+			</p>
+			
+			<h1 >Registro</h1>
+			
+			<div><span>Nombre</span> <input type="text" id="nombre" name="nombre"></div>
 
-                <div><span>Nombre de Usuario</span> <input type="text" name="nusuario"></div>
+			<div><span>Apellido</span> <input type="text" id="apellido" name="apellido"></div>
 
-                <div><span>Correo Electrónico</span> <input type="text" name="Correo"></div>
-               
-                <div><span>Clave</span> <input type="password" id="pass1" name="clave"></div>
-                
-                <div><span>Confirme Clave</span> <input type="password" id="pass2" name="clave"></div>
-                
-                <button type="submit" value="Enviar">Iniciar Sesion</button>
-            
-            </form>
-    
-        </body>
-    <html>
+			<div><span>Nombre de Usuario</span> <input type="text" id="usuario" name="usuario"></div>
+
+			<div><span>Correo Electrónico</span> <input type="text" id="correo" name="correo"></div>
+		   
+			<div><span>Clave</span> <input type="password" id="pass1" name="pass1"></div>
+			
+			<div><span>Confirme Clave</span> <input type="password" id="pass2" name="pass2"></div>
+			
+			<button type="submit" onclick="submit()">Registrar</button>
+			
+			{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					<div class="notification is-danger">
+						{{ messages[0] }}
+					</div>
+				{% endif %}
+				{% endwith %}
+
+		</form>
+	</body>
+<html>
