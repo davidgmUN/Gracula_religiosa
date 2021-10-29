@@ -1,41 +1,47 @@
-<!DOCTYPE html>
-<html lang="es-CO";>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Registro Usuario</title>
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/estiloRegistro.css')}}"/>
-	</head>
+<DOCTYPE html>
+    <html>
+        <html lang="es-CO">
+        <head>
+            <meta charset="UTF-8"/>
+            <title>Registro Usuario</title>
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/estilos.css')}}"/>
+            <script src="{{ url_for('static',filename='JS/registroscript.js')}}" language="javascript" type="text/javascript"></script>
+        </head>
+    
+        <body>
 
-	<body> 
-		<form class="form" action="/registro/" method="POST" name="formRegistro">
-			<p>
-				<img src="{{ url_for('static',filename='imagenes/graculalogo.png')}}" alt="logogracula" style="width:100px;height:100px;">GraculaReligiosa
-			</p>
-			
-			<h1 >Registro</h1>
-			
-			<div><span>Nombre</span> <input type="text" id="nombre" name="nombre"></div>
+            <form class="form" action="/registro/" method="POST" name="formRegistro" onsubmit="validar_formulario(); return false" >
+                <p id ="logo">
+                    <img src="{{ url_for('static',filename='imagenes/graculalogo.png')}}" alt="logogracula" style="width:100px;height:100px;"><br>GraculaReligiosa
+                </p>
+                
+                <h1 >Registro</h1>
+             
+                <div><span>Nombre</span><br><input type="text" name="nombre" id="nombre" required></div>
 
-			<div><span>Apellido</span> <input type="text" id="apellido" name="apellido"></div>
+                <div><span>Apellido</span><br><input type="text" name="apellido" id="apellido"></div>
 
-			<div><span>Nombre de Usuario</span> <input type="text" id="usuario" name="usuario"></div>
+                <div><span>Fecha Nacimiento</span><br><input type="date" name="fecha_nac" id="fecha_nac"></div>
 
-			<div><span>Correo Electrónico</span> <input type="text" id="correo" name="correo"></div>
-		   
-			<div><span>Clave</span> <input type="password" id="pass1" name="pass1"></div>
-			
-			<div><span>Confirme Clave</span> <input type="password" id="pass2" name="pass2"></div>
-			
-			<button type="submit" onclick="submit()">Registrar</button>
-			
-			{% with messages = get_flashed_messages() %}
-				{% if messages %}
-					<div class="notification is-danger">
-						{{ messages[0] }}
-					</div>
-				{% endif %}
-				{% endwith %}
+                <div><span>Nombre de Usuario</span><br><input type="text" name="usuario" id="usuario" required minlength="4" maxlength="10"></div>
 
-		</form>
-	</body>
-<html>
+                <div><span>Correo Electrónico</span><br><input type="text" name="correo" id="correo" required></div>
+               
+                <div><span>Contraseña</span><input type="password" id="pass1" name="pass1" required minlength="8"> <img alt="ver" src="{{ url_for('static',filename='imagenes/mostrarcontraseña.png')}}" width="50px" onmouseover="mostar1()" onmouseout="ocultar1()"/></div>
+                
+                <div><span class="conf">Confirme Contraseña</span><input type="password" id="pass2" name="pass2" required minlength="8"> <img alt="ver" src="{{ url_for('static',filename='imagenes/mostrarcontraseña.png')}}" width="50px" onmouseover="mostar2()" onmouseout="ocultar2()"/></div>
+                
+                <div class=env><button type="submit" id="resgistrarse"> Registrarse</button></div>
+            
+            </form>
+ 
+                <!-- Mensajes de Verificación -->
+                <div id="error" class="alert alert-danger ocultar" role="alert">
+                Las Contraseñas no coinciden, vuelve a intentarlo!
+                </div>
+                <div id="ok" class="alert alert-success ocultar" role="alert">
+                ¡Usuario registrado! (Procesando formulario ... )
+                </div>
+    
+        </body>
+    <html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Perfil</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/estiloEditar.css')}}" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="https://kit.fontawesome.com/b7a8aa1dfa.js" crossorigin="anonymous"></script>
+
+</head>
+    <body>
+
+        <section class="perfilUsuario2">      
+
+            <div class="encabezado2">
+
+                <div class="perfilUsuarioPortada2">
+                    <div class="logo2">
+                        <img src="{{ url_for('static',filename='imagenes/graculalogo.png')}}" alt="logogracula" style="width:100px;height:100px;">
+                        <h1>Gracula Religiosa</h1>                       
+                    </div >
+
+                    <div class="avatar2">
+                        <img src="css/imagenes/perfil.jpg" alt="fotoperfil" style="width:165px;height:165px">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="menu-perfil2">
+                <ul>
+                    <li><a href="{{ url_for('perfil_usuario') }}" title=""><i class="icono-perfil fas fa-users"></i>Perfil</a></li>
+                    <li><a href="{{ url_for('buscar_usuario') }}" title=""><i class="fas fa-search"></i> Busqueda</a></li>
+                </ul>
+
+            </div>
+
+            <div class="perfilUsuarioCuerpo2">
+                <div class="perfilUsuariobas2">
+                    <h1 class="nickname2">Edición de Slogan</h1>
+                    <p class="slogan2"> Aqui debe ir el slogan</p>
+                    <div>
+                        <button type="button" class="boton-slogan2">
+                            <a href="#" title=""><i class="icono-perfil fas fa-users"></i>Guardar</a>
+                        </button>
+                        <button type="button" class="boton-slogan22">
+                            <a href="{{ url_for('perfil_usuario') }}" title=""><i class="icono-perfil fas fa-users"></i>Cancelar</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="PerUsInfo2"> 
+                    <h1 class="nickname2">Edición de Información</h1>
+                    <div class="datos2">
+                        <li><i class="icon2 fas fa-id-card"></i>Nombres: </li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon2 fas fa-birthday-cake"></i>Edad: </li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon2 fas fa-calendar-alt"></i>Fecha de nacimiento:</li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon2 fas fa-mars"></i>Sexo: </li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon2 fas fa-phone"></i>Telefono: </li><input type="text" id="direccion"value=""/>
+                    </div>
+                    <div class="datos2">
+                        <div></div><li><i class="icon fas fa-graduation-cap"></i>Formacion Academica: </li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon2 fas fa-building"></i>Empleo:</li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon2 fas fa-briefcase"></i>Cargo:</li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon2 fas fa-video"></i>Pasatiempos:</li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon2 fas fa-utensils"></i>Comida Favorita:</li><input type="text" id="direccion"value=""/>
+                    </div>
+                    <div>
+                        <button id="boton"  class="boton-infor2">
+                            <a href="#" title=""><i class="icono-perfil fas fa-users"></i>Guardar</a>
+                        </button>
+                        <button id="boton"  class="boton-infor22">
+                            <a href="{{ url_for('perfil_usuario') }}" title=""><i class="icono-perfil fas fa-users"></i>Cancelar</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+         </section>
+    </body>
+</html>

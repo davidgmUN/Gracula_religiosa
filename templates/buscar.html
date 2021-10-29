@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busqueda_Usuario</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/estiloBusqueda.css')}}">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/jquery.js"></script>
+ 
+    <script src="https://kit.fontawesome.com/b7a8aa1dfa.js" crossorigin="anonymous"></script>
+</head>
+    <script>
+        var buscador = $("#table").DataTable();
+
+            $("#busqueda").keyup(function(){
+    
+             buscador.search($(this).val()).draw();
+    
+            if ($("#busqueda").val() == ""){
+                $(".contenido").fadeOut(300);
+            }else{
+                 $(".contenido").fadeIn(300);
+                 }
+            })
+
+        
+    </script>
+    <body>
+
+        
+        <section class="busquedaUsuario">
+
+            <div class="encabezado2">
+
+                <div>
+                    <button id="boton"  class="btnclose">
+                        <a href="{{ url_for('logout') }}" title=""><i class="icono-perfil fas fa-users"></i>Cerrar Sesion</a>
+                    </button>
+                </div>
+
+                <div class="Buscar">
+                    <div class="logo2">
+                        <img src="{{ url_for('static',filename='imagenes/graculalogo.png')}}" alt="logogracula" style="width:100px;height:100px;">
+                        <h1>Gracula Religiosa</h1>                       
+                    </div >
+                    <div class="titulo">
+                        <h2> BUSQUEDA DE USUARIO</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-perfil">
+                <ul>
+                    <li><a href="{{ url_for('perfil_usuario') }}" title=""><i class="icono-perfil fas fa-users"></i>Perfil</a></li>
+                    <li><a href="{{ url_for('buscar_usuario') }}" title=""><i class="fas fa-search"></i>Busqueda</a></li>
+                </ul>
+
+            </div>
+
+            <div class="Recuadrobusqueda">
+                <span>Buscar usuario:</span><input type="search" id="busqueda" placeholder="Buscar Usuario" required>
+                <div class="boton">
+                    <i class="fas fa-search"></i>
+                </div>
+
+                <div class="contenido">
+                    <div class="tabla">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> <a href="#">Jennifer</a></td>
+                                </tr>
+                                <tr>
+                                    <td> <a href="#">Liana</a></td>
+                                </tr>
+                                <tr>
+                                    <td> <a href="#">Karen</a></td>
+                                </tr>
+                                <tr>
+                                    <td> <a href="#">David</a></td>
+                                </tr>
+                                <tr>
+                                    <td> <a href="#">Oscar</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                   
+                </div>
+
+                
+
+
+            </div>
+
+
+
+
+        </section>
+
+    </body>
+</html>

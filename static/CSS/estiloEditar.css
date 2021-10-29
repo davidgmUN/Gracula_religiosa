@@ -4,7 +4,7 @@ body {
     background                  : linear-gradient(rgb(159, 9, 179), transparent);
 }
 
-.perfilUsuario .encabezado {
+.perfilUsuario2 .encabezado2 {
     width                       : 100%;
     display                     : flex;
     justify-content             : center;
@@ -12,29 +12,27 @@ body {
     margin-bottom               : 20px;
 }
 
-.perfilUsuario .perfilUsuarioCuerpo,
-.perfilUsuario {
+.perfilUsuario2 .perfilUsuarioPortada2 {
+    display                     : block;
+    position                    : relative;
+    width                       : 90%;
+    height                      : 260px;
+    background                  : linear-gradient(45deg, #BC3CFF, #cf5dcf);
+    border-radius               : 0 0 20px 20px;
+}
+
+.perfilUsuario2 .perfilUsuarioCuerpo2,
+.perfilUsuario2 {
     display                     : flex;
-    left                        : -300px;
-    top                         : 10px;
+    left                        : -50px;
+    top                         : 5px;
     flex-wrap                   : wrap;
     flex-direction              : column;
     align-items                 : center;
 }
 
 
-
-.perfilUsuario .perfilUsuarioPortada {
-    display                     : block;
-    position                    : relative;
-    width                       : 90%;
-    left: -50px;
-    height                      : 260px;
-    background                  : linear-gradient(45deg, #BC3CFF, #cf5dcf);
-    border-radius               : 0 0 20px 20px;
-}
-
-.perfilUsuario .perfilUsuarioCuerpo .boton-slogan{
+.perfilUsuario2 .perfilUsuarioCuerpo2 .boton-slogan2{
     border                      : 0;
     border-radius               : 8px;
     padding                     : 2px 15px;
@@ -42,19 +40,18 @@ body {
     color                       : rgb(235, 230, 230);
     cursor                      : pointer;
     position                    : relative;
-    left                        : 260px;
+    left                        : 200px;
     top                         : 50px;
     text-decoration             : none;
     text-decoration             : none;
 }
 
-.perfilUsuario .perfilUsuarioCuerpo .boton-slogan:hover {
+.perfilUsuario2 .perfilUsuarioCuerpo2 .boton-slogan2:hover {
     background-color            : blueviolet;
     color                       : #fff;
 }
 
-
-.perfilUsuario .perfilUsuarioCuerpo .boton-infor{
+.perfilUsuario2 .perfilUsuarioCuerpo2 .boton-slogan22{
     border                      : 0;
     border-radius               : 8px;
     padding                     : 2px 15px;
@@ -62,19 +59,57 @@ body {
     color                       : rgb(235, 230, 230);
     cursor                      : pointer;
     position                    : relative;
-    left                        : 410px;
-    top                         : 20px;
+    left                        : 200px;
+    top                         : 50px;
     text-decoration             : none;
-
 }
 
-.perfilUsuario .perfilUsuarioCuerpo .boton-infor:hover {
+.perfilUsuario2 .perfilUsuarioCuerpo2 .boton-slogan22:hover {
     background-color            : blueviolet;
     color                       : #fff;
 }
 
 
-.perfilUsuario .logo{
+.perfilUsuario2 .perfilUsuarioCuerpo2 .boton-infor2{
+    border                      : 0;
+    border-radius               : 8px;
+    padding                     : 2px 15px;
+    background-color            : rgba(121, 60, 116, 0.377);
+    color                       : rgb(235, 230, 230);
+    cursor                      : pointer;
+    position                    : relative;
+    left                        : 360px;
+    top                         : 20px;
+    text-decoration             : none;
+
+}
+
+.perfilUsuario2 .perfilUsuarioCuerpo2 .boton-infor2:hover {
+    background-color            : blueviolet;
+    color                       : #fff;
+}
+
+.perfilUsuario2 .perfilUsuarioCuerpo2 .boton-infor22{
+    border                      : 0;
+    border-radius               : 8px;
+    padding                     : 2px 15px;
+    background-color            : rgba(121, 60, 116, 0.377);
+    color                       : rgb(235, 230, 230);
+    cursor                      : pointer;
+    position                    : relative;
+    left                        : 360px;
+    top                         : 20px;
+    text-decoration             : none;
+
+}
+
+.perfilUsuario2 .perfilUsuarioCuerpo2 .boton-infor22:hover {
+    background-color            : blueviolet;
+    color                       : #fff;
+}
+
+
+.perfilUsuario2 .logo2{
     color                       : aliceblue;
     float                       : left;
 
@@ -85,7 +120,7 @@ h1{
     font-size                   : medium;
 }
 
-.perfilUsuario .avatar {
+.perfilUsuario2 .avatar2 {
     display                     : flex;
     width                       : 190px;
     height                      : 190px;
@@ -101,31 +136,13 @@ h1{
     z-index                     : 1;
 }
 
-.perfilUsuario .avatar img {
+.perfilUsuario2 .avatar2 img {
     width                       : 100%;
     position                    : relative;
     border-radius               : 50%;
 }
 
-.perfilUsuario .btnclose{
-    border                      : 0;
-    border-radius               : 8px;
-    padding                     : 2px 15px;
-    background-color            : rgba(236, 87, 224, 0.89);
-    color                       : rgb(235, 230, 230);
-    cursor                      : pointer;
-    position                    : relative;
-    right                       : -1100px;
-    top                         : 10px;
-    z-index                     : 1;
-}
-
-.perfilUsuario .btnclose a{
-    text-decoration             : none;
-
-}
-
-.perfilUsuario .avatar .boton-avatar {
+.perfilUsuario2 .avatar2 .boton-avatar2 {
     position                    : absolute;
     left                        : -2px;
     top                         : -2px;
@@ -138,26 +155,26 @@ h1{
     cursor                      : pointer;
 }
 
-.perfilUsuario .perfilUsuarioCuerpo {
-    width                       : 42%;
+.perfilUsuario2 .perfilUsuarioCuerpo2 {
+    width                       : 140%;
     position                    : relative;
     max-width                   : 700px;
 }
 
-.perfilUsuario .perfilUsuarioCuerpo .nickname {
+.perfilUsuario2 .perfilUsuarioCuerpo2 .nickname2{
     display                     : block;
     width                       : 100%;
     font-size                   : 1.75em;
     margin-bottom               : 8px;
 }
 
-.perfilUsuario .perfilUsuarioCuerpo .slogan {
+.perfilUsuario2 .perfilUsuarioCuerpo2 .slogan2 {
     color                       : #848484;
     font-size                   : 15.2px;
     text-align                  : center;
 }
 
-.perfilUsuario .PerUsInfo {
+.perfilUsuario2 .PerUsInfo2 {
     display                     : flex;
     flex-wrap                   : wrap;
     padding                     : 24px 32px;
@@ -168,7 +185,7 @@ h1{
     font-size                   : 12px;
 }
 
-.perfilUsuario .perfilUsuariobas {
+.perfilUsuario2 .perfilUsuariobas2 {
     display                     : flex;
     flex-wrap                   : wrap;
     padding                     : 24px 32px;
@@ -179,61 +196,39 @@ h1{
     font-size                   : 12px;
 }
 
-.perfilUsuario .perfilUsuariobas {
+.perfilUsuario2 .perfilUsuariobas2 {
     margin-bottom               : 20px;
     text-align                  : center;
 }
 
-.perfilUsuario .datos {
+.perfilUsuario2 .datos2 {
     width                       : 50%;
     list-style                  : none;
 }
 
-.perfilUsuario .datos li {
+.perfilUsuario2 .datos2 li {
     padding                     : 5px 0;
 }
 
-.perfilUsuario .datos li .icon {
+.perfilUsuario2.datos2 li .icon {
     margin-right                : 16px;
     font-size                   : 19.2px;
     vertical-align              : middle;
 }
 
-.publicacion {
-    width                       : 35%;
-    height                      : 150% ;
-    max-width                   : 750px;
-}
 
-
-.publicacion{
-    position                    : relative;
-    flex-wrap                   : wrap;
-    flex-direction              : column;
-    right                       : -310px;
-    top                         : -473px;
-    background-color            : #fff;
-    flex-wrap                   : wrap;
-    padding                     : 8px 32px;
-    box-shadow                  : 0 0 12px rgba(0, 0, 0, .2);
-    background-color            : #fff;
-    border-radius               : 15px;
-    font-size                   : 12px;
-
-}
-
-.PerUsInfo .input{
+.PerUsInfo2 .input{
     position                    : absolute;
     float                       : left;
 }
 
-.perfilUsuario .menu-perfil ul {
+.perfilUsuario2 .menu-perfil2 ul {
     display                     : flex;
     list-style                  : none;
 
 }
 
-.perfilUsuario .menu-perfil a {
+.perfilUsuario2 .menu-perfil2 a {
     text-decoration             : none;
     color                       : inherit;
     padding                     : 8px 20px;
@@ -241,14 +236,26 @@ h1{
     border-radius               : 10px;
 }
 
-.perfilUsuario .menu-perfil a:hover {
+.perfilUsuario2 .menu-perfil2 a:hover {
     background-color            : blueviolet;
     color                       : #fff;
 }
 
 
-.btnclose:hover{
-    background-color            : blueviolet;
-    color                       : #fff;  
+.perfilUsuario2 .btnclose{
+    border                      : 0;
+    border-radius               : 8px;
+    padding                     : 2px 15px;
+    background-color            : rgba(236, 87, 224, 0.89);
+    color                       : rgb(235, 230, 230);
+    cursor                      : pointer;
+    position                    : relative;
+    right                       : -1100px;
+    top                         : 10px;
+    z-index                     : 1;
 }
 
+.perfilUsuario2 .btnclose a{
+    text-decoration             : none;
+
+}

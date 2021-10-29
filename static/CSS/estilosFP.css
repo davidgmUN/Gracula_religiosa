@@ -1,0 +1,116 @@
+﻿body{
+    background:linear-gradient(30deg, blueviolet, white) ;
+    background-repeat: no-repeat;
+}
+.logo{
+    text-align      :center;
+    font-size       :80px;
+    font-family     :fantasy;
+    color:white
+}
+p{
+    margin:2% 10% ; 
+    color: white;
+    width:80%;
+    font-size: 40px;
+    text-align: justify
+}
+h1{
+    text-align      :center;
+    color           :#ffffff;
+    background-color:linear-gradient(30deg, blueviolet, white);
+    font-family     :sans-serif;
+    font-size: 50px;
+}
+.imgPublicacion{
+    margin:5% 5%;
+}
+.imgLike{
+    margin-left:5%;
+    width: 6%; 
+    margin-top: 20px;
+}
+.imgComment{
+    width:6%;
+    height: 10; 
+}
+.imgSend{
+    width: 6%;
+}
+form{
+    background-color: rgb(157,7,177);
+    width: 1000px;
+    padding:40px;
+    height: 1200px;
+    margin: auto;
+}
+.logoFp{
+    text-align      :left;
+    font-size       :45px;
+    font-family     :fantasy;
+    color:white
+}
+.imgPerfilUsario1{
+    display:flex;
+    margin-bottom: 50px;
+}
+.imgPerfilUsario2{
+    margin:200px;
+    position: relative;
+    bottom: 400px;
+    
+}
+
+#Search{
+    margin-left: 150px;
+    border-radius: 10px;
+    padding: 11px;
+    position: relative;
+    top:-30px;
+}
+
+.imgPublicidad{
+    margin-left:800px;
+    position:relative ;
+    top:-600px;
+
+}
+.imgSesion{
+    margin-left:900px;
+    position: relative;
+    top:-80px;
+
+}
+
+.imgPregunta{
+    margin-left:800px;
+    position: relative;
+    top:-150px;
+
+}
+h2{
+    color:#ffffff;
+    margin-left: 250px;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+h3{
+    color:#ffffff;
+    margin-left: 210px;
+    font-family: sans-serif ;
+    font-size: 25px; 
+}
+
+.btnclose{
+    border                      : 0;
+    border-radius               : 8px;
+    padding                     : 2px 15px;
+    background-color            : rgba(236, 87, 224, 0.89);
+    color                       : rgb(235, 230, 230);
+    cursor                      : pointer;
+    position                    : relative;
+    right                       : -900px;
+    top                         : -280px;
+    z-index                     : 1;
+}

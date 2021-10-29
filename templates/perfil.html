@@ -1,38 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pagina de perfil</title>
-        <link rel='stylesheet' type='text/css' href="{{ url_for('static',filename='CSS/estiloPerfil.css')}}" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Perfil</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/estiloPerfil.css')}}" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="https://kit.fontawesome.com/b7a8aa1dfa.js" crossorigin="anonymous"></script>
 
-    </head>
-
-  
+</head>
     <body>
 
-        <div class="principal"> 
-            <p>
-                <img src="{{ url_for('static',filename='imagenes/graculalogo.png')}}" alt="logogracula" style="width:60px;height:60px;">Gracula Religiosa
-            </p>
 
-        </div>
+        <section class="perfilUsuario">      
 
-        <div class="selector">
-            <div class="c1"><input type="button" id="pftxt" value="Perfil"</div>
-         </div>
+            <div class="encabezado">
+
+                <div>
+                    <button id="boton"  class="btnclose">
+                        <a href="{{ url_for('logout') }}" title=""><i class="icono-perfil fas fa-users"></i>Cerrar Sesion</a>
+                    </button>
+                </div>
+
+                <div class="perfilUsuarioPortada">
+                    <div class="logo">
+                        <img src="{{ url_for('static',filename='imagenes/graculalogo.png')}}" alt="logogracula" style="width:100px;height:100px;">
+                        <h1>Gracula Religiosa</h1>                       
+                    </div >
+
+                    <div class="avatar">
+                        <img src="css/imagenes/perfil.jpg" alt="fotoperfil" style="width:165px;height:165px">
+                    </div>
+                </div>
+            </div>
 
 
-        <form>
-  
-            <form1>
+            <div class="menu-perfil">
+                <ul>
+                    <li><a href="{{ url_for('perfil_usuario') }}" title=""><i class="icono-perfil fas fa-users"></i>Perfil</a></li>
+                    <li><a href="{{ url_for('buscar_usuario') }}" title=""><i class="fas fa-search"></i> Busqueda</a></li>
+                </ul>
 
+            </div>
 
-            </form1>
-        
-            
-        </form>
-        
+            <div class="perfilUsuarioCuerpo">
+                <div class="perfilUsuariobas">
+                    <h1 class="nickname">AQUI DEBE IR EL NOMBRE DEL USUARIO</h1>
+                    <p class="slogan"> Aqui debe ir el slogan</p>
+                    <div>
+                        <button type="button" class="boton-slogan">
+                            <a href="{{ url_for('editar_perfil') }}" title=""><i class="icono-perfil fas fa-users"></i>Editar Slogan</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="PerUsInfo"> 
+                    <div class="datos">
+                        <li><i class="icon fas fa-id-card"></i>Nombres: </li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon fas fa-birthday-cake"></i>Edad: </li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon fas fa-calendar-alt"></i>Fecha de nacimiento:</li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon fas fa-mars"></i>Sexo: </li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon fas fa-phone"></i>Telefono: </li><input type="text" id="direccion"value=""/>
+                    </div>
+                    <div class="datos">
+                        <div></div><li><i class="icon fas fa-graduation-cap"></i>Formacion Academica: </li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon fas fa-building"></i>Empleo:</li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon fas fa-briefcase"></i>Cargo:</li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon fas fa-video"></i>Pasatiempos:</li><input type="text" id="direccion"value=""/>
+                        <li><i class="icon fas fa-utensils"></i>Comida Favorita:</li><input type="text" id="direccion"value=""/>
+                    </div>
+                    <div>
+                        <button id="boton"  class="boton-infor">
+                            <a href="{{ url_for('editar_perfil') }}" title=""><i class="icono-perfil fas fa-users"></i>Editar Informacion</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="publicacion">
+                <h2>Publicaciones</h2>
+                <div>
+                    <h1>PAGINA EN CONSTRUCCION</h1>
+                </div>
+                <div>
+                    &nbsp;
+                </div>
+                <div>
+                    &nbsp;
+                </div>
+                <div>
+                    &nbsp;
+                </div>
+                <div>
+                    &nbsp;
+                </div>
+
+            </div>
+
+        </section>
+        <script src="js/menujs"></script>
     </body>
 </html>
